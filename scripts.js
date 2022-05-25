@@ -12,6 +12,9 @@ let currentMarker = 'X'
 
 
 
+
+
+
 // this "handleClick" function is called when a box is clicked. Here, "element" will hold the same value as "this" does in the HTML. 
 // "this" is a special word in JS but "element" could have been "thing" or "el" or whatever we wanted it to be as long as we use it again in the "console.log" statement
 const handleClick = (element) => {
@@ -51,11 +54,12 @@ const addMarker = (id) => {
   // document
   // .innerHTML 
 
-  changeMarker()
+ 
+
+
+document.getElementById(id).innerHTML = currentMarker;
+ changeMarker()
 }
-
-
-
 
 
 
@@ -93,7 +97,8 @@ const resetBoard = () => {
   // =
   // document
   // const
-  
+  const squares = document.getElementsByTagName ("td");
+
   // loops over the HTML Collection of TDs and clears out the Xs and Os
   for (i=0; i < squares.length; i++) {
 
